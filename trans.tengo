@@ -1,0 +1,9 @@
+// msgText := "Привет волку!"
+if outGateway == "parents-hey" || outGateway == "test-gw" {
+	os := import("os")
+	cmd := os.exec("trans", "-brief", msgText)
+	msgText = string(cmd.output()) + "==========\n" + msgText
+}
+
+// fmt := import("fmt")
+// fmt.print(msgText)
